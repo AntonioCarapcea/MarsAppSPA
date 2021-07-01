@@ -19,7 +19,9 @@ export function IntroductionComponent(props: IntroductionProps) {
     return (
         <div className={props.divClassName}>
             <img src={props.imgSrc} className={props.imgClassName} alt={props.imgAlt} />
-            <h1> {props.h1Contents} </h1>
+            <h1>
+                {props.h1Contents}
+            </h1>
             <p>
                 {props.p1Contents}
             </p>

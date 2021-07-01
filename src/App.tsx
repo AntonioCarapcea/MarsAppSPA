@@ -10,21 +10,22 @@ import {
 import { Header } from "./Header";
 
 function App() {
-  return (<div className="App">
-    <Router>
-      <Header />
-      <Switch>
-        <Route path="/clicker">
-          <p> </p>
-          <Component1 />
-        </Route>
-        <Route path="/">
-          <NasaInfo />
-        </Route>
-      </Switch>
-    </Router>
+  return (
+    <div className="App">
+      <Router>
+        <Header />
+        <Switch>
+          <Route path="/clicker">
+            <p> </p>
+            <Component1 />
+          </Route>
+          <Route path="/">
+            <NasaInfo />
+          </Route>
+        </Switch>
+      </Router>
 
-  </div>);
+    </div>);
 }
 
 export default App;

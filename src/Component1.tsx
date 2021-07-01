@@ -26,11 +26,12 @@ export function Component1() {
         }
     }, []);
 
-    return (<div className="Component1">
-        <CounterContext.Provider value={{ count, increment }}>
-            <Component2 />
-            <Component3 />
-        </CounterContext.Provider>
-    </div>
+    return (
+        <div className="Component1">
+            <CounterContext.Provider value={{ count, increment }}>
+                <Component2 />
+                <Component3 />
+            </CounterContext.Provider>
+        </div>
     );
 }
