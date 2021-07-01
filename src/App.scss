@@ -37,7 +37,7 @@ $darkblue: #05445E;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+
   font-size: calc(10px + 2vmin);
   color: $light;
 }
@@ -62,3 +62,29 @@ $darkblue: #05445E;
   box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
   border-radius: 10px;
 }
+
+.Header {
+  width:110%;
+  height:50px;
+  background: $violet;
+  position: sticky;
+  top: 0;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+
+.NavLink {
+  color: $light;
+  text-decoration: none;
+
+  &:hover{
+    color: $darkblue;
+  }
+}
+
+
+.HeaderTable {
+  margin: auto;
+  border-spacing: 5cm 5px;
+}
+
