@@ -1,14 +1,13 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 import NasaInfo from './NasaInfo';
-import { ClickCounter } from './ClickCounter';
+import { Component1 } from './Component1';
 
 function App() {
   return (<div className="App">
     <header className="App-header">
       <NasaInfo />
-      <ClickCounter />
+      <Component1 />
     </header>
   </div>);
 }

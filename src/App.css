@@ -45,3 +45,7 @@
     transform: rotate(360deg);
   }
 }
+
+.Component1 {
+  background: gray;
+}
