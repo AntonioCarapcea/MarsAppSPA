@@ -1,3 +1,10 @@
+$blue: #043C94;
+$red: #F94022;
+$violet: #7C3C5C;
+$lightblue: #7C9CC4;
+$light: #D4F1F4;
+$darkblue: #05445E;
+
 .App {
   text-align: center;
 }
@@ -9,6 +16,8 @@
 
 .Nasa-logo {
   height: 40vmin;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .Nasa {
@@ -23,18 +32,18 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: $lightblue;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: $light;
 }
 
 .App-link {
-  color: #61dafb;
+  color: $darkblue;
 }
 
 @keyframes App-logo-spin {
@@ -47,5 +56,9 @@
 }
 
 .Component1 {
-  background: gray;
+  background: $darkblue;
+  width: 50%;
+  height: 50%;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
 }

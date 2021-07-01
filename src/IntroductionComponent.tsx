@@ -1,5 +1,5 @@
 import React from 'react';
-import './App.css';
+import './App.scss';
 
 
 export interface IntroductionProps {
@@ -11,7 +11,8 @@ export interface IntroductionProps {
     p1Contents: string,
     p2Contents: string
     href: string,
-    hrefContents: string
+    hrefContents: string,
+    hrefClassName: string
 }
 
 export function IntroductionComponent(props: IntroductionProps) {
@@ -25,8 +26,9 @@ export function IntroductionComponent(props: IntroductionProps) {
             <p>
                 {props.p2Contents}
             </p>
-            <a href={props.href}>
+            <a href={props.href} className={props.hrefClassName}>
                 {props.hrefContents}
             </a>
+            <p></p>
         </div>);
 }
