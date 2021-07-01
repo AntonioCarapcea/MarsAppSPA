@@ -7,6 +7,14 @@ $darkblue: #05445E;
 
 .App {
   text-align: center;
+  background-color: $lightblue;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  font-size: calc(10px + 2vmin);
+  color: $light;
 }
 
 .App-logo {
@@ -29,17 +37,6 @@ $darkblue: #05445E;
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
-}
-
-.App-header {
-  background-color: $lightblue;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  font-size: calc(10px + 2vmin);
-  color: $light;
 }
 
 .App-link {

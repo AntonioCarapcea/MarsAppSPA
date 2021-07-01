@@ -2,7 +2,7 @@ import React from 'react';
 import './App.scss';
 import { Link } from "react-router-dom";
 export function Header() {
-    return (        
+    return (
         <div className="Header">
             <table className="HeaderTable">
                 <tr>
@@ -12,7 +12,7 @@ export function Header() {
                         </Link>
                     </th>
                     <th>
-                    <Link className="NavLink" to="/">
+                        <Link className="NavLink" to="/">
                             NASA
                         </Link>
                     </th>
