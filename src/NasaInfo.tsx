@@ -5,7 +5,7 @@ import { IntroductionComponent } from './IntroductionComponent'
 
 function NasaInfo() {
 
-    return ( <IntroductionComponent divClassName="Nasa"
+    return (<IntroductionComponent divClassName="Nasa"
         imgSrc={nasaLogo}
         imgAlt="logo"
         imgClassName="Nasa-logo"
@@ -27,7 +27,7 @@ function NasaInfo() {
         which had to match the Soviet military achievement; corporate America looking for
         new business; and a strong new trend in public opinion looking up to space exploration."
         href="https://en.wikipedia.org/wiki/NASA"
-        hrefContents="Source: wikipedia"/>);
+        hrefContents="Source: wikipedia" />);
 }
 
 export default NasaInfo;

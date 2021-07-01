@@ -14,19 +14,19 @@ export interface IntroductionProps {
     hrefContents: string
 }
 
-export function IntroductionComponent(props : IntroductionProps) {
+export function IntroductionComponent(props: IntroductionProps) {
     return (
-    <div className={props.divClassName}>
-    <img src={props.imgSrc} className={props.imgClassName} alt={props.imgAlt} />
-    <h1> {props.h1Contents} </h1>
-    <p> 
-        {props.p1Contents}
-    </p>
-    <p> 
-        {props.p2Contents}
-    </p>
-    <a href={props.href}>
-        {props.hrefContents}
-    </a>            
-    </div>);
+        <div className={props.divClassName}>
+            <img src={props.imgSrc} className={props.imgClassName} alt={props.imgAlt} />
+            <h1> {props.h1Contents} </h1>
+            <p>
+                {props.p1Contents}
+            </p>
+            <p>
+                {props.p2Contents}
+            </p>
+            <a href={props.href}>
+                {props.hrefContents}
+            </a>
+        </div>);
 }
