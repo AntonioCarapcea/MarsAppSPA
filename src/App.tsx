@@ -12,14 +12,13 @@ import { Header } from "./Header";
 function App() {
   return (<div className="App">
     <Router>
+      <Header />
       <Switch>
         <Route path="/clicker">
-          <Header />
           <p> </p>
           <Component1 />
         </Route>
         <Route path="/">
-          <Header />
           <NasaInfo />
         </Route>
       </Switch>
