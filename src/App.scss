@@ -1,0 +1,129 @@
+$blue: #043C94;
+$red: #F94022;
+$violet: #7C3C5C;
+$lightblue: #7C9CC4;
+$light: #D4F1F4;
+$darkblue: #05445E;
+
+.App {
+  text-align: center;
+  background-color: $lightblue;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  font-size: calc(10px + 2vmin);
+  color: $light;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+.Nasa-logo {
+  height: 40vmin;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.Nasa {
+  font-size: 19px;
+  width: 70%;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-link {
+  color: $darkblue;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.Component1 {
+  background: $darkblue;
+  width: 50%;
+  height: 50%;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+}
+
+.Header {
+  width:110%;
+  height:50px;
+  background: $violet;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+
+.NavLink {
+  color: $light;
+  text-decoration: none;
+
+  &:hover{
+    color: $darkblue;
+  }
+}
+
+
+.HeaderTable {
+  margin: auto;
+  border-spacing: 5cm 5px;
+}
+
+.DivSelect {
+  width: 20%;
+  height: 100px;
+}
+
+.DivSelectContainer {
+  width: 100%;
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+}
+
+.DivImgContainer {
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+}
+
+.RoverImg{
+  border-radius: 10px;
+  height: 12cm;
+  width: 12cm;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
+
+  &:hover {
+    box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.5);
+  }
+ 
+}
+
+.DivImg {
+  background: $violet;
+  width:15cm;
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  margin: 10px;
+}
+
