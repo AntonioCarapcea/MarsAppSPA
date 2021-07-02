@@ -8,6 +8,7 @@ import {
   Route
 } from "react-router-dom";
 import { Header } from "./Header";
+import { RoverSelector } from "./RoverSelector";
 
 function App() {
   return (
@@ -19,9 +20,14 @@ function App() {
             <p> </p>
             <Component1 />
           </Route>
+          <Route path="/rovers">
+            <p></p>
+            <RoverSelector />
+          </Route>
           <Route path="/">
             <NasaInfo />
           </Route>
+          
         </Switch>
       </Router>
 
