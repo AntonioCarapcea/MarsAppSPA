@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import Select from 'react-select'
 import axios from 'axios';
 import { RoverImages, RoverImagesProps, RoverImagesDefaultProps } from './RoverImages';
-
 import './App.scss';
 
 export interface Camera {
@@ -39,12 +38,9 @@ interface CameraOption {
 }
 
 export function RoverSelector() {
-    // eslint-disable-next-line
     const [rovers, SetRovers] = useState<Rover[]>([] as Rover[]);
     const [roverOptions, SetRoverOptions] = useState<RoverOption[]>([] as RoverOption[]);
-    // eslint-disable-next-line
     const [cameraOptions, SetCameraOptions] = useState<CameraOption[]>([] as CameraOption[]);
-    // eslint-disable-next-line
     const [sol, SetSol] = useState<number>(0);
     const [selectedRover, SetSelectedRover] = useState<string>("");
     const [selectedCamera, SetSelectedCamera] = useState<string>("");
@@ -55,8 +51,6 @@ export function RoverSelector() {
         const path = "http://localhost:8000/rovers";
         axios.get<RoverResponse>(path)
             .then(response => {
-                console.log(response.data.rovers);
-
                 let newRoverOptions: RoverOption[] = [];
 
                 for (let rover of response.data.rovers) {

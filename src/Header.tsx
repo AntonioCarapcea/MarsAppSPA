@@ -22,6 +22,11 @@ export function Header() {
                                 Rovers
                             </Link>
                         </th>
+                        <th>
+                            <Link className="NavLink" to="/pod">
+                                Picture of the day
+                            </Link>
+                        </th>
                     </tr>
                 </tbody>
             </table>

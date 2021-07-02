@@ -9,21 +9,27 @@ import {
 } from "react-router-dom";
 import { Header } from "./Header";
 import { RoverSelector } from "./RoverSelector";
+import { PictureOfTheDay } from "./PictureOfTheDay"
 
 function App() {
   return (
     <div className="App">
       <Router>
         <Header />
+        <p></p>
         <Switch>
-          <Route path="/clicker">
-            <p> </p>
+          <Route path="/clicker">  
             <Component1 />
           </Route>
+
           <Route path="/rovers">
-            <p></p>
             <RoverSelector />
           </Route>
+
+          <Route path="/pod">
+            <PictureOfTheDay />
+          </Route>
+
           <Route path="/">
             <NasaInfo />
           </Route>
