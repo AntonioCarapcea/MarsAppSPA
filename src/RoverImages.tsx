@@ -36,14 +36,16 @@ export function RoverImages(props : RoverImagesProps) {
 
     function MakePhoto(photo : Photo) {
         return (
-            <div>
-            <img src={photo.img_src}/>
+            <div className="DivImg">
+                <p>Photo {photo.id} taken on Earth date {photo.earth_date} </p>
+                <img src={photo.img_src} className="RoverImg"/>
+                <p></p>
             </div>
         )
     }
 
     return (
-       <div>
+       <div className="DivImgContainer">
            {photos.map(MakePhoto)}
        </div>
     )   
