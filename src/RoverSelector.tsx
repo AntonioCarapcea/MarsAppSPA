@@ -31,45 +31,73 @@ interface RoverOption {
     label: string;
     value: Rover;
 }
+// eslint-disable-next-line
+interface CameraOption {
+    label: string;
+    value: Camera;
+}
 
 export function RoverSelector() {
     // eslint-disable-next-line
     const [rovers, SetRovers] = useState<Rover[]>([] as Rover[]);
     const [roverOptions, SetRoverOptions] = useState<RoverOption[]>([] as RoverOption[]);
+    // eslint-disable-next-line
+    const [cameraOptions, SetCameraOptions] = useState<CameraOption[]>([] as CameraOption[]);
 
 
     useEffect(() => {
         const path = "http://localhost:8000/rovers";
         axios.get<RoverResponse>(path)
-            .then(response =>
-                {
-                    console.log(response.data.rovers);
-                   
-                    let newRoverOptions : RoverOption[] = [];
+            .then(response => {
+                console.log(response.data.rovers);
 
-                    for (let rover of response.data.rovers) {
-                        newRoverOptions.push({
-                            label: rover.name,
-                            value: rover
-                        })
-                    }
+                let newRoverOptions: RoverOption[] = [];
 
-                    
-
-                    SetRovers(response.data.rovers);
-                    SetRoverOptions(newRoverOptions);
+                for (let rover of response.data.rovers) {
+                    newRoverOptions.push({
+                        label: rover.name,
+                        value: rover
+                    })
                 }
+
+                SetRovers(response.data.rovers);
+                SetRoverOptions(newRoverOptions);
+            }
             )
             .catch(err => console.log(err));
     }, []);
 
-    function handleRoverSelect(e : any) {
-        console.log(e);
+    function handleRoverSelect(e: RoverOption | RoverOption[] | null) {
+        const option = e as RoverOption;
+        const rover = option.value;
+        const cameras = rover.cameras;
+        let newCameraOptions: CameraOption[] = [];
+
+        for (let camera of cameras) {
+            newCameraOptions.push({
+                label: camera.full_name,
+                value: camera
+            });
+        }
+
+        SetCameraOptions(newCameraOptions);
     }
 
     return (
-        <div className="DivSelect">
-            <Select options={roverOptions} onChange={handleRoverSelect}/>
+        <div className="DivSelectContainer">
+            <p>
+                Select the rover:
+            </p>
+            <div className="DivSelect">
+                <Select options={roverOptions} onChange={handleRoverSelect} />
+            </div>
+            <p>
+                Select the camera type:
+            </p>
+            <div className="DivSelect">
+                <Select options={cameraOptions} />
+            </div>
         </div>
+
     );
 }
